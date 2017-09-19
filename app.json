@@ -1,4 +1,8 @@
-{
+{ "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-php"
+    }
+  ],
   "name": "Get Fix Product Info Site",
   "description": "Demonstrates Salesforce Identity on a 3rd Party Site",
   "repository": "https://github.com/salesforceidentity/heroku-embedded-login-serverside-example",
