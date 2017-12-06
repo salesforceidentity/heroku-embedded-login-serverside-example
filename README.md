@@ -19,7 +19,7 @@ Steps to deploy
 	* Copy the Consumer Key
 	* You will also want to Manage the Connected App and change the Permitted Users policy from User to Admin Approved. Then you will want to a Profile or Permission Set for the user you want to test.
 4. Set the Heroku config vars via Setting > Reveal Config Vars:
-	* "SALESFORCE_COMMUNITY_URL" to the Community's domain For example: https://mycommunity.force.com/community2
+	* "SALESFORCE_COMMUNITY_URL" to the Community's domain, no trailing slash and no "https://", for example: mycommunity.force.com/community2
 	* "SALESFORCE_CLIENT_ID" to your Connected App's Consumer key
 	* "SALESFORCE_CLIENT_SECRET" to your Connected App's Consumer secret
 	* "SALESFORCE_HEROKUAPP_URL" to the URL of deployed Heroku App, no trailing slash and no "https://", for example bouncy-castle-1234.herokuapp.com
