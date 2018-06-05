@@ -53,7 +53,7 @@ public class ServerSideCallbacks extends HttpServlet{
         String tokenResponse = null;
         String communityUrl = null;
         HttpClient httpclient = new HttpClient();
-        try {            
+        try {
             // community_url parameter passed from redirect uri.
             communityUrl = request.getParameter("sfdc_community_url");
             // Token endpoint : communityUrl + "/services/oauth2/token";
@@ -68,6 +68,8 @@ public class ServerSideCallbacks extends HttpServlet{
             // Callback URL of the Connected App.
             post.addParameter("redirect_uri", "https://" +  System.getenv("SALESFORCE_HEROKUAPP_URL") + "/_callback");
             
+    			System.out.println("Attempting to POST to token endpoint: " + post.getPath());	
+            
             httpclient.executeMethod(post);
             tokenResponse = post.getResponseBodyAsString();
             post.releaseConnection();
@@ -77,9 +79,9 @@ public class ServerSideCallbacks extends HttpServlet{
         		throw new ServletException(e);
         }
 
-
         JSONObject identityJSON = null;
         try {
+        		System.out.println("Attemptin to parse token response: " + tokenResponse);
             JSONObject token = new JSONObject(tokenResponse);
             String accessToken = token.getString("access_token");
             String identity = token.getString("id");
