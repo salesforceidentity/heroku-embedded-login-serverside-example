@@ -8,7 +8,7 @@
   <name>Example Salesforce Identity Embedded Login with Serverside Callback</name>
   <url>http://maven.apache.org</url>
   <properties>
-    <tomcat.version>8.5.2</tomcat.version>
+    <tomcat.version>8.5.23</tomcat.version>
     <maven.compiler.source>1.6</maven.compiler.source>
     <maven.compiler.target>1.6</maven.compiler.target>
   </properties>
@@ -16,11 +16,6 @@
     <dependency>
         <groupId>org.apache.tomcat.embed</groupId>
         <artifactId>tomcat-embed-core</artifactId>
-        <version>${tomcat.version}</version>
-    </dependency>
-    <dependency>
-        <groupId>org.apache.tomcat.embed</groupId>
-        <artifactId>tomcat-embed-logging-juli</artifactId>
         <version>${tomcat.version}</version>
     </dependency>
     <dependency>
