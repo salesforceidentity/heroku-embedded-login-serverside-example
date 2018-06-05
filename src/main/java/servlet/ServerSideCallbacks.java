@@ -69,7 +69,6 @@ public class ServerSideCallbacks extends HttpServlet{
             post.addParameter("redirect_uri", "https://" +  System.getenv("SALESFORCE_HEROKUAPP_URL") + "/_callback");
             
     			System.out.println("Attempting to POST to token endpoint: " + post.getPath());	
-            
             httpclient.executeMethod(post);
             tokenResponse = post.getResponseBodyAsString();
             post.releaseConnection();
