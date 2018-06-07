@@ -83,7 +83,7 @@ public class ServerSideCallbacks extends HttpServlet{
 
         JSONObject identityJSON = null;
         try {
-        		System.out.println("Attemptin to parse token response: " + tokenResponse);
+        		System.out.println("Attempting to parse token response: " + tokenResponse);
             JSONObject token = new JSONObject(tokenResponse);
             String accessToken = token.getString("access_token");
             String identity = token.getString("id");
