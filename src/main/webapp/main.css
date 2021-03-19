@@ -472,6 +472,13 @@ footer a {
 	    -webkit-box-shadow: 0px 2px 6px #090909;
 	    -moz-box-shadow: 0px 2px 6px #090909;
 	    border-radius: 5px;
-	
-	
+}
+div.tr{
+  background-color: aqua;
+}
+div.tc{
+background-color: aqua;
+}
+p.sfid-small{
+background-color: aqua;
 }
