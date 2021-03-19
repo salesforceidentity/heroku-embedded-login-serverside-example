@@ -41,8 +41,8 @@ public class ServerSideCallbacks extends HttpServlet{
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws 
         ServletException, IOException {
 
-    		System.setProperty("javax.net.ssl.trustStore",".jdk/jre/lib/security/cacerts");
-    		System.setProperty("javax.net.ssl.trustStorePassword", System.getenv("CACERTS_PASSWORD"));
+    		//System.setProperty("javax.net.ssl.trustStore",".jdk/jre/lib/security/cacerts");
+    		//System.setProperty("javax.net.ssl.trustStorePassword", System.getenv("CACERTS_PASSWORD"));
         String code = request.getParameter("code");
         if (code != null) {
             code = URLDecoder.decode(code, "UTF-8");
