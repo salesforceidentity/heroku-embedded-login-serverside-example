@@ -41,8 +41,8 @@ public class ServerSideCallbacks extends HttpServlet{
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws 
         ServletException, IOException {
 
-    		//System.setProperty("javax.net.ssl.trustStore",".jdk/jre/lib/security/cacerts");
-    		//System.setProperty("javax.net.ssl.trustStorePassword", System.getenv("CACERTS_PASSWORD"));
+    	//System.setProperty("javax.net.ssl.trustStore",".jdk/jre/lib/security/cacerts");
+    	//System.setProperty("javax.net.ssl.trustStorePassword", System.getenv("CACERTS_PASSWORD"));
         String code = request.getParameter("code");
         if (code != null) {
             code = URLDecoder.decode(code, "UTF-8");
@@ -115,6 +115,7 @@ public class ServerSideCallbacks extends HttpServlet{
                 Base64.getEncoder().encodeToString(identityJSON.toString().getBytes(StandardCharsets.UTF_8))+"'>\n" +
                 "<meta name=\"salesforce-server-starturl\" content='" + startURL +"'>\n" +
                 "<meta name=\"salesforce-target\" content= \"#salesforce-login\">\n"+
+                "<meta name=\"salesforce-logout-on-browser-close\" content=\"true\">\n" +
                 "<meta name=\"salesforce-allowed-domains\" content=\"" + System.getenv("SALESFORCE_HEROKUAPP_URL") + "\">\n" +
                 "<script src=\""+ communityUrl +"/servlet/servlet.loginwidgetcontroller?type=javascript_widget\"" +
                 " async defer></script>\n" +
